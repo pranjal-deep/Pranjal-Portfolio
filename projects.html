@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pranjal Deep | Projects</title>
+    
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/projects.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.0/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
+    <script type='text/javascript' src='assets/js/handlebars.js'></script>
+    <script type="text/javascript" src="assets/js/jquery-min.js"></script>
+</head>
+<body>
+    <h1 id="page-title">Projects</h1>
+    <div class="projects-list">
+        <script id="website-template" type="text/x-handlebars-template"> 
+            {{#each projects}}
+                <div class="project-tile">
+                    <img src="{{tileImage}}" alt="Tile" height="400" width="400">
+                    <div class = "project-content">
+                    <h1>{{title}}</h1>
+                        <h2>{{subtitle}}</h2>
+                        <p>{{description}}</p>
+                    </div>
+                    <div class="tag">
+                        <h2>{{tags}} </h2>
+                    </div>
+                </div>
+            {{/each}}
+        </script>
+    </div>
+
+    <a class="button" href="./index.html">Back</a>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

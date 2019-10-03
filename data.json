@@ -1,0 +1,76 @@
+{
+    "game": {},
+    "home": 
+        {
+            "title":"",
+            "description":"",
+            "coverImage":""
+        },
+        
+    "projects": [
+        {
+            "tileImage":"assets/images/projects/tripic/cover.png",
+            "title":"Tripic",
+            "subtitle":"We make your Trip terrific!",
+            "description":"Tripic is an image recognition application that helps lost travelers identify what's around them.",
+            "role":"UI/UX Designer",
+            "tags":["mobile","travel","case study"],
+            "clientContext":"",
+            "requirements":"",
+            "process":"",
+            "content":"",
+            "conclusion":""
+            },
+        {
+            "tileImage":"assets/images/projects/chatbots/Chatbots-Cover-compressed.jpg",
+            "title":"Chatty: The Chatbot",
+            "subtitle":"A UX Design case study",
+            "description":"A Chatbot is essentially a program that interacts with users and addresses their needs through a text messaging platform. An ideal bot interacts with the user in a humane fashion generating a meaningful and productive conversation leading to the fulfillment of their goals.",
+            "role":"UX Designer",
+            "tags":["chatbot","AI","ML","mobile"],
+            "clientContext":"",
+            "requirements":"",
+            "process":"",
+            "content":"",
+            "conclusion":""
+        }],
+    "about":
+        {
+            "tileImage":"",
+            "heading":"",
+            "description":""
+        },
+    "resume":
+        {
+            "skills": {},
+            "education": {},
+            "experience":
+                [{
+                    "companyName":"",
+                    "time":"",
+                    "position":"",
+                    "description":""
+                },
+                {
+                    "companyName":"",
+                    "time":"",
+                    "position":"",
+                    "description":""
+                },
+                {
+                    "companyName":"",
+                    "time":"",
+                    "position":"",
+                    "description":""
+                }],
+        "certifications": {}
+        },
+    "contact":
+        {
+            "dribbble":"",
+            "linkedin":"",
+            "behance":"",
+            "email":"",
+            "number":""
+        }
+}

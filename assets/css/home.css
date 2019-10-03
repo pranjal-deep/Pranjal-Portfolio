@@ -1,0 +1,37 @@
+body {
+    background-image: url("images/space-bg-1920.png"); 
+    /* max-width: 100%; */
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+}
+
+#spaceship {
+    background-image: url("images/spaceship.png"); 
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        background-image: url("images/space-bg-mobile.png"); 
+    }
+
+    #mySideNav.openMenu{
+		width: 100vw;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-image: url("images/space-bg-tab.png"); 
+    }
+}

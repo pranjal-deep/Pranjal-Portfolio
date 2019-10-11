@@ -16,26 +16,43 @@
     <script type="text/javascript" src="assets/js/jquery-min.js"></script>
 </head>
 <body>
-    <h1 id="page-title">Projects</h1>
+    <div class="top-page">
+        <h1 id="page-title">Projects</h1>
+        <!-- <ul id="menu">
+            <li>All</li>
+            <li>Academic</li>
+            <li>Industrial</li>
+        </ul> -->
+        <!-- <a class="button" id="back-button" href="./index.html">Back</a> -->
+    </div>    
     <div class="projects-list">
         <script id="website-template" type="text/x-handlebars-template"> 
-            {{#each projects}}
-                <div class="project-tile">
-                    <img src="{{tileImage}}" alt="Tile" height="400" width="400">
-                    <div class = "project-content">
-                    <h1>{{title}}</h1>
-                        <h2>{{subtitle}}</h2>
-                        <p>{{description}}</p>
+        <a href="#">
+            <div class="project-wrapper">
+                {{#each projects}}
+                    <div class="project-tile">
+                        <div id="project-image">
+                            <img src="{{tileImage}}" alt="Tile">
+                        </div>
+                        <div id = "project-content">
+                            <h1>{{title}}</h1>
+                            <h2>{{subtitle}}</h2>
+                            <p class="text-overflow">{{description}}</p>
+                        </div>
+                        <!-- Comma separated Tags to be added -->
+                        <!-- <div class="tag">
+                            <ul>{{#each tags}}
+                                {{tags}}, 
+                            {{/each}}</ul>
+                        </div> -->
                     </div>
-                    <div class="tag">
-                        <h2>{{tags}} </h2>
-                    </div>
-                </div>
-            {{/each}}
+                {{/each}}
+            </div> 
+        </a> 
         </script>
     </div>
 
-    <a class="button" href="./index.html">Back</a>
+    
 
     <script src="assets/js/script.js"></script>
 </body>

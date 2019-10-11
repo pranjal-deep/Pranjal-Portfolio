@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap');
 
@@ -118,4 +119,126 @@ p {
         font-size: 1.5em;
     } */
     
+=======
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap');
+
+:root {
+    --bg:#181725;
+    --text:#fff;
+    --secondary-bg: #27253A;
+    --text-light: #CDD1E7;
+    --shadow: #1E1C33;
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.5em;
+    /* font-weight: 700; */
+    margin: 2% 0;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+h1,h2,h3,li {
+    color: var(--text);
+}
+
+p {
+    color: var(--text-light);
+}
+
+/* Complete work on text overflow. Have to add ... for overflowed text */
+/* .text-overflow {
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+h2,h3,li {
+    font-family: 'Russo One', sans-serif;
+    margin: 2% 0;  
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    line-height: 130%;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.7em 1.4em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.15em;
+    box-sizing: border-box;
+    font-family:'Russo One',sans-serif;
+    text-transform: uppercase;
+    color: var(--text);
+    background-color:#3369ff;
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+    text-align: center;
+    /* position: relative; */
+    text-decoration: none;
+}
+
+.button:hover{
+    background-color: #2153db;
+}
+
+.button a {
+    text-decoration: none;
+    /* color:#FFFFFF; */
+}
+
+/* .button:active {
+        text-decoration: none;
+} */
+
+.background {
+    position: absolute;
+}
+
+/* Undecided menu */
+/* 
+.menu {
+    width: 100vw;
+    height: 50px;
+    margin-left: 0;
+    margin-top: 50px;
+     opacity: 0.7;
+    z-index: 10;
+    display: block;
+}
+
+#mySideNav.openMenu {
+    width:50vw; 
+} */
+
+
+
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 1024px) {
+    h2,h3,p {
+        font-size: 0.8em;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    /* h2,h3,p {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    } */
+    
+>>>>>>> 574d80ee65a01edd2f89986d56ca9f234b3e3333
 }

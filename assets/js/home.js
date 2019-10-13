@@ -11,20 +11,17 @@ var aboutX=0.2*winWidth-buttonWidth/2, aboutY=0.8*winHeight-buttonHeight/2, proj
 console.log(winWidth);
 console.log(winHeight);
 
-
-assets/js/home.js
-
 function preload() {
     console.log("here");
     bg = loadImage('assets/images/home/space-bg-1920.png');
-    spaceship = loadImage('../images/home/spaceship.png');
-    aboutButton = loadImage('/assets/images/home/about-1.png');
-    projectButton = loadImage('/assets/images/home/project-1.png');
-    astronaut = loadImage('/assets/images/home/astronaut-5.png');
+    spaceship = loadImage('assets/images/home/spaceship.png');
+    aboutButton = loadImage('assets/images/home/about-1.png');
+    projectButton = loadImage('assets/images/home/project-1.png');
+    astronaut = loadImage('assets/images/home/astronaut-5.png');
 
-    aboutButtonAnimation = loadAnimation('/assets/images/home/small/about-1.png','/assets/images/home/small/about-7.png');
-    projectButtonAnimation = loadAnimation('../assets/images/home/small/project-1.png','../assets/images/home/small/project-7.png');
-    astronautAnimation = loadAnimation('../assets/images/home/small/astronaut-5.png','../assets/images/home/small/astronaut-9.png');
+    aboutButtonAnimation = loadAnimation('assets/images/home/small/about-1.png','assets/images/home/small/about-7.png');
+    projectButtonAnimation = loadAnimation('assets/images/home/small/project-1.png','assets/images/home/small/project-7.png');
+    astronautAnimation = loadAnimation('assets/images/home/small/astronaut-5.png','assets/images/home/small/astronaut-9.png');
     astronautSprite = createSprite(winWidth/2,winHeight-astronautHeight/2+30,830,530);
 }
 

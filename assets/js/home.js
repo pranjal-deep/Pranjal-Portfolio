@@ -12,7 +12,7 @@ console.log(winWidth);
 console.log(winHeight);
 
 function preload() {
-    console.log("here");
+    console.log("here again");
     bg = loadImage('assets/images/home/space-bg-1920.png');
     spaceship = loadImage('assets/images/home/spaceship.png');
     aboutButton = loadImage('assets/images/home/about-1.png');

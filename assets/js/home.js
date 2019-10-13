@@ -27,12 +27,12 @@ function preload() {
 
 function setup() {
     createCanvas(winWidth, winHeight);
-    astronautSprite.addAnimation('normal','../assets/images/home/small/astronaut-5.png','../assets/images/home/small/astronaut-6.png');
+    astronautSprite.addAnimation('normal','assets/images/home/small/astronaut-5.png','assets/images/home/small/astronaut-6.png');
     // astronautSprite.addAnimation('afterPressingProject','../assets/images/home/small/astronaut-1.png','../assets/images/home/small/astronaut-5.png');
-    astronautSprite.addAnimation('pressingProject','../assets/images/home/small/astronaut-5.png','../assets/images/home/small/astronaut-1.png');
-    astronautSprite.addAnimation('onProject','../assets/images/home/small/astronaut-0.png','../assets/images/home/small/astronaut-1.png');
-    astronautSprite.addAnimation('pressingAbout','../assets/images/home/small/astronaut-11.png','../assets/images/home/small/astronaut-7.png');
-    astronautSprite.addAnimation('onAbout','../assets/images/home/small/astronaut-7.png','../assets/images/home/small/astronaut-8.png');
+    astronautSprite.addAnimation('pressingProject','assets/images/home/small/astronaut-5.png','assets/images/home/small/astronaut-1.png');
+    astronautSprite.addAnimation('onProject','assets/images/home/small/astronaut-0.png','assets/images/home/small/astronaut-1.png');
+    astronautSprite.addAnimation('pressingAbout','assets/images/home/small/astronaut-11.png','assets/images/home/small/astronaut-7.png');
+    astronautSprite.addAnimation('onAbout','assets/images/home/small/astronaut-7.png','assets/images/home/small/astronaut-8.png');
 }
 
 function draw() {

@@ -13,13 +13,13 @@ console.log(winHeight);
 
 
 function preload() {
-    bg = loadImage('../assets/images/home/space-bg-1920.png');
-    spaceship = loadImage('../assets/images/home/spaceship.png');
-    aboutButton = loadImage('../assets/images/home/about-1.png');
-    projectButton = loadImage('../assets/images/home/project-1.png');
-    astronaut = loadImage('../assets/images/home/astronaut-5.png');
+    bg = loadImage('/assets/images/home/space-bg-1920.png');
+    spaceship = loadImage('/assets/images/home/spaceship.png');
+    aboutButton = loadImage('/assets/images/home/about-1.png');
+    projectButton = loadImage('/assets/images/home/project-1.png');
+    astronaut = loadImage('/assets/images/home/astronaut-5.png');
 
-    aboutButtonAnimation = loadAnimation('../assets/images/home/small/about-1.png','../assets/images/home/small/about-7.png');
+    aboutButtonAnimation = loadAnimation('/assets/images/home/small/about-1.png','/assets/images/home/small/about-7.png');
     projectButtonAnimation = loadAnimation('../assets/images/home/small/project-1.png','../assets/images/home/small/project-7.png');
     astronautAnimation = loadAnimation('../assets/images/home/small/astronaut-5.png','../assets/images/home/small/astronaut-9.png');
     astronautSprite = createSprite(winWidth/2,winHeight-astronautHeight/2+30,830,530);

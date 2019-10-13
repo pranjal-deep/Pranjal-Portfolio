@@ -12,9 +12,12 @@ console.log(winWidth);
 console.log(winHeight);
 
 
+assets/js/home.js
+
 function preload() {
-    bg = loadImage('/assets/images/home/space-bg-1920.png');
-    spaceship = loadImage('/assets/images/home/spaceship.png');
+    console.log("here");
+    bg = loadImage('assets/images/home/space-bg-1920.png');
+    spaceship = loadImage('../images/home/spaceship.png');
     aboutButton = loadImage('/assets/images/home/about-1.png');
     projectButton = loadImage('/assets/images/home/project-1.png');
     astronaut = loadImage('/assets/images/home/astronaut-5.png');

@@ -20,7 +20,7 @@ h2 {
     font-size: 1em;
 }
 
-h1,h2,h3,li {
+h1,h2,h3,li,a {
     color: var(--text);
 }
 

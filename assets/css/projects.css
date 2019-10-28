@@ -3,26 +3,39 @@ body {
 }
 
 .top-page {
-    /* display: inline; */
-    width: 100%;
+    display: block;
+    width: 86vw;
+    /* height: auto; */
+    margin: 6vw 0 4vw 8vw;
+    /* overflow: hidden; */
 }
 
 #page-title {
-    margin: 6vw 0 4vw 8vw;
+    /* margin: 6vw 0 4vw 8vw; */
     display: block;
     width: 40%;
+    float: left;
     /* float: left; */
     /* font-size: 3em; */
 }
 
 #menu {
+    float: right;
     display: block;
     width: 60%;
+    margin: 2% 0;
+    /* margin: 0 0 5vw 0; */
 }
 
 #menu li {
-    display: block;
-    margin: 0 4%;
+    /* display: inline; */
+    /* text-align: right; */
+    float: right;
+    margin: 2% 4%;
+}
+
+#menu a:hover {
+    color: var(--text-light);
 }
 
 /* Code Menu */

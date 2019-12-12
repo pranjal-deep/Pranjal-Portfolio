@@ -59,6 +59,57 @@
             "process":"",
             "content":"",
             "conclusion":""
+        },{
+            "tileImage":"assets/images/projects/yourphysio/cover-image.png",
+            "title":"YourPhysio",
+            "subtitle":"A patient-centric approach transforming physiotherapy care",
+            "description":"YourPhyiso aims at building a chain of model physiotherapy clinics using process driven procedures.",
+            "role":"UI/UX Designer",
+            "tags":["Healthcare","responsive web","branding"],
+            "clientContext":"",
+            "requirements":"",
+            "process":"",
+            "content":"",
+            "conclusion":""
+            },
+        {
+            "tileImage":"assets/images/projects/taskey/cover.png",
+            "title":"TasKey",
+            "subtitle":"A Task Management Application",
+            "description":"A group process automation project aiming to manage all workflows in or across teams.",
+            "role":"UI/UX Designer",
+            "tags":["PWA","responsive","enterprize"],
+            "clientContext":"",
+            "requirements":"",
+            "process":"",
+            "content":"",
+            "conclusion":""
+        },
+        {
+            "tileImage":"assets/images/projects/hrm/hrm-cover.png",
+            "title":"HRM Web App",
+            "subtitle":"Resource management tool",
+            "description":"HRM is an online tool to assist HR, Training, recruitment, and engineering management teams in monitoring and managing skills and competencies in an organization.",
+            "role":"UX Designer",
+            "tags":["WebApp","UX","Research","Process Management"],
+            "clientContext":"",
+            "requirements":"",
+            "process":"",
+            "content":"",
+            "conclusion":""
+        },
+        {
+            "tileImage":"assets/images/projects/dailyobjects/cover.png",
+            "title":"DailyObjects: User Account",
+            "subtitle":"A UX Design Case Study",
+            "description":"DailyObjects is an e-commerce platform that works with avant-garde designers to print their designs on different products.",
+            "role":"UI/UX Designer",
+            "tags":["Web","e-commerce","UI/UX","mobile"],
+            "clientContext":"",
+            "requirements":"",
+            "process":"",
+            "content":"",
+            "conclusion":""
         }],
     "about":
         {

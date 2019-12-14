@@ -128,21 +128,6 @@ function mouseClicked(){
             screenSprite.changeAnimation('closedScreen');
             screenPos = 'closed';
         } else if(mouseX>=projectX && mouseX<=projectX+buttonWidth && mouseY>=projectY && mouseY<=projectY+buttonHeight){
-            //executes on clicking the project button. Zooms in the screen and shows projects in space
-            // camera.zoom = 1.4;
-            // zoom = true;
-            // camera.position.x = cursorX;
-            // camera.position.y = cursorY-100;
-            // cursor.changeAnimation('showCursor');
-            // screenSprite.changeAnimation('hide');
-            // astronautSprite.changeAnimation('hideAstronaut');
-            // status = 'none';
-
-            // spaceship = loadImage('assets/images/home/blank-1.png');
-            // spaceshipFrame = loadImage('assets/images/home/spaceshipFrame.png');
-            // aboutButton = loadImage('assets/images/home/blank-1.png');
-            // projectButton = loadImage('assets/images/home/blank-1.png');
-            // camStatus = true;
             window.location.href = "index.html";
 
         } else if(mouseX>=aboutX && mouseX<=aboutX+buttonWidth && mouseY>=aboutY && mouseY<=aboutY+buttonHeight){
@@ -153,21 +138,5 @@ function mouseClicked(){
             screenText = 'Humans are already destroying earth.';
             // getJoke();
         }
-    }
-    // else{
-    //     camera.zoom = 1;
-    //     zoom = false;
-    //     camera.position.x = winWidth/2;
-    //     camera.position.y = winHeight/2;
-    //     cursor.changeAnimation('hideCursor');
-    //     screenSprite.changeAnimation('closedScreen');
-    //     astronautSprite.changeAnimation('normal');
-    //     status = 'nuetral';
-    //     spaceship = loadImage('assets/images/home/spaceship.png');
-    //     spaceshipFrame = loadImage('assets/images/home/blank-1.png');
-    //     aboutButton = loadImage('assets/images/home/about-1.png');
-    //     projectButton = loadImage('assets/images/home/project-1.png');
-    //     camStatus = false;
-    // }
-    
+    }    
 }

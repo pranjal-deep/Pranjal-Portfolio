@@ -9,7 +9,7 @@ var astronautSprite, astronautWidth = 830, astronautHeight = 530;
 var cursorX = winWidth/2, cursorY = winHeight/2;
 
 //adjusting the About and Project buttons by referencing to the window size
-var aboutX=0.28*winWidth-buttonWidth/2, aboutY=0.875*winHeight-buttonHeight/2, projectX=0.73*winWidth-buttonWidth/2, projectY=0.875*winHeight-buttonHeight/2;
+var aboutX=0.21*winWidth, aboutY=projectY=0.825*winHeight, projectX=0.65*winWidth;
 var buttonProject, buttonAbout;
 
 function preload() {
@@ -51,6 +51,8 @@ function setup() {
     buttonAbout.position(aboutX, aboutY);
     buttonAbout.mousePressed(aboutClicked);
     buttonAbout.id('largeButton');
+
+    loadJSON('./assets/js/data.json');
 }
 
 function draw() {
@@ -70,12 +72,12 @@ function draw() {
         astronautSprite.changeAnimation('pressingProject');
         astronautSprite.changeAnimation('onProject');
         status = 'project';
-    } else if(mouseX<=aboutX+buttonWidth && status == 'nuetral') {
+    } else if(mouseX<=aboutX+220 && status == 'nuetral') {
         astronautSprite.changeAnimation('pressingAbout');
         astronautSprite.changeAnimation('onAbout');
         status = 'about';
     } 
-    if((status == 'project' || status == 'about') && mouseX >= aboutX+buttonWidth && mouseX <= projectX) {      
+    if((status == 'project' || status == 'about') && mouseX >= aboutX+220 && mouseX <= projectX) {      
         astronautSprite.changeAnimation('normal');
         status = 'nuetral';
     }
@@ -140,7 +142,11 @@ function projectClicked(){
         buttonAbout.position(aboutX,aboutY+50);
         buttonProject.position(projectX,projectY+50);
         camStatus = true;
+        projectList();
     }
+}
+
+function projectList(){
 }
 
 function aboutClicked(){  

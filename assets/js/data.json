@@ -1,58 +1,96 @@
 {        
     "planets":[
         {
-            "image":"assets/images/home/planets/planet-110-550.png",
+            "image":"./assets/images/home/planets/planet-110-550.png",
             "positionX":"110",
             "positionY":"550",
             "width":"80",
             "height":"80"
         },
         {
-            "image":"assets/images/home/planets/planet-1660-1280.png",
-            "positionX":"1660",
-            "positionY":"1280",
+            "image":"./assets/images/home/planets/planet-1660-1280.png",
+            "positionX":"1460",
+            "positionY":"880",
             "width":"1000",
             "height":"870"
+        },
+        {
+            "image":"./assets/images/home/planets/planet-720-150.png",
+            "positionX":"720",
+            "positionY":"150",
+            "width":"100",
+            "height":"100"
+        },
+        {
+            "image":"./assets/images/home/planets/planet-770-700.png",
+            "positionX":"770",
+            "positionY":"700",
+            "width":"193",
+            "height":"94"
+        },
+        {
+            "image":"./assets/images/home/planets/planet-1370-590.png",
+            "positionX":"1370",
+            "positionY":"590",
+            "width":"120",
+            "height":"120"
+        },
+        {
+            "image":"./assets/images/home/planets/planet-1630-64.png",
+            "positionX":"1630",
+            "positionY":"64",
+            "width":"80",
+            "height":"80"
         }
     ],
     "projects": [
         {
-            "targetUrl":"pranjaldeep.com/tripic",
+            "targetUrl":"./error.html",
             "tileImage":"assets/images/projects/tripic/cover.png",
             "title":"Tripic",
             "subtitle":"We make your Trip terrific!",
             "description":"Tripic is an image recognition application that helps lost travelers identify what's around them.",
             "role":"UI/UX Designer",
             "tags":["mobile","travel","case study"]
-            },{
+            },
+        {
+            "targetUrl":"https://www.pranjaldeep.com/tripic",
             "tileImage":"assets/images/projects/chatbots/Chatbots-Cover-compressed.jpg",
             "title":"Chatty: The Chatbot",
             "subtitle":"A UX Design case study",
             "description":"A Chatbot is essentially a program that interacts with users and addresses their needs through a text messaging platform.",
             "role":"UX Designer",
             "tags":["chatbot","AI","ML","mobile"]
-        },{
+        },
+        {
+            "targetUrl":"./error.html",
             "tileImage":"assets/images/projects/hrm/hrm-cover.png",
             "title":"HRM Web App",
             "subtitle":"Resource management tool",
             "description":"HRM is an online tool to assist HR, Training, recruitment, and engineering management teams in monitoring and managing skills and competencies in an organization.",
             "role":"UX Designer",
             "tags":["WebApp","UX","Research","Process Management"]
-        },{
+        },
+        {
+            "targetUrl":"https://www.pranjaldeep.com/tripic",
             "tileImage":"assets/images/projects/medcords/MC-site-title.png",
             "title":"Medcords",
             "subtitle":"Organize your medical data",
             "description":"Medcords is a healthcare platform to help organize all medical history of an individual and their family in rural and urban areas.",
             "role":"UX Designer",
             "tags":["Healthcare","Android","UI/UX","mobile"]
-        },{
+        },
+        {
+            "targetUrl":"https://www.pranjaldeep.com/tripic",
             "tileImage":"assets/images/projects/yourphysio/cover-image.png",
             "title":"YourPhysio",
             "subtitle":"A patient-centric approach transforming physiotherapy care",
             "description":"YourPhyiso aims at building a chain of model physiotherapy clinics using process driven procedures.",
             "role":"UI/UX Designer",
             "tags":["Healthcare","responsive web","branding"]
-            },{
+            },
+        {
+            "targetUrl":"https://www.pranjaldeep.com/tripic",
             "tileImage":"assets/images/projects/taskey/cover.png",
             "title":"TasKey",
             "subtitle":"A Task Management Application",

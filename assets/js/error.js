@@ -1,46 +1,38 @@
 var winWidth = window.innerWidth;
 var winHeight = window.innerHeight;
-var camStatus = false;
-var screenText = "It seems you've landed in the wrong place.";
-var status = 'nuetral', screenPos = 'open', zoom = false, scene_W = 2910, scene_H=2188;
+var screenText = "404\nIt seems you've landed in the wrong place.";
+var status = 'nuetral', screenPos = 'closed', scene_W = 2910, scene_H=2188;
 
-//Storing the position of About and Project buttons
+//Storing the position of buttons
 var buttonWidth = 260, buttonHeight=82, screenButton;
 var astronautSprite, astronautWidth = 830, astronautHeight = 530;
 
-var cursorX = winWidth/2, cursorY = winHeight/2;
-
-//adjusting the About and Project buttons by referencing to the window size
-var aboutX=0.28*winWidth-buttonWidth/2, aboutY=0.875*winHeight-buttonHeight/2, projectX=0.73*winWidth-buttonWidth/2, projectY=0.875*winHeight-buttonHeight/2;
+//adjusting the buttons by referencing to the window size
+var aboutX=0.20*winWidth, aboutY=projectY=0.825*winHeight, projectX=0.65*winWidth;
 
 function preload() {
     bg = loadImage('assets/images/home/space-bg-1920.png');
     spaceship = loadImage('assets/images/home/spaceship.png');
-    aboutButton = loadImage('assets/images/home/destroy-earth.png');
-    projectButton = loadImage('assets/images/home/go-home.png');
-    // astronaut = loadImage('assets/images/home/alien.png');
-    // screenCursor = loadImage('assets/images/home/cursor.png');
-    // backgroundSprite = createSprite(winWidth,winHeight,0,0);
-
-    //adding buttons animation
-    aboutButtonAnimation = loadAnimation('assets/images/home/small/about-1.png','assets/images/home/small/about-7.png');
-    projectButtonAnimation = loadAnimation('assets/images/home/small/project-1.png','assets/images/home/small/project-7.png');
-    
-    // cursor = createSprite(cursorX-10,cursorY-150,40,40);
     screenSprite = createSprite(winWidth/2,200,530,300);
-    astronautSprite = createSprite(winWidth/2,winHeight-astronautHeight/2+75,830,580);
     
     screenAnimation = loadAnimation('assets/images/home/small/screen-1.png','assets/images/home/small/screen-6.png');
-    screenButton = loadImage('assets/images/home/screen-button.png');
 }
 
 function setup() {
     createCanvas(winWidth, winHeight);
 
+    buttonDestroy = createButton('Destroy Earth');
+    buttonDestroy.position(projectX, projectY);
+    buttonDestroy.mousePressed(destroyClicked);
+    buttonDestroy.id('largeButton');
+
+    buttonBack = createButton('Go Back');
+    buttonBack.position(aboutX, aboutY);
+    buttonBack.mousePressed(backClicked);
+    buttonBack.id('largeButton');
+
+    astronautSprite = createSprite(winWidth/2,winHeight-astronautHeight/2+75,830,580);
     
-    // screenSprite.addAnimation('closedScreen','assets/images/home/small/screen-6.png','assets/images/home/small/screen-7.png');
-    // screenSprite.addAnimation('openingScreen','assets/images/home/small/screen-6.png','assets/images/home/small/screen-1.png');
-    // screenSprite.addAnimation('closingScreen','assets/images/home/small/screen-1.png','assets/images/home/small/screen-6.png');
     screenSprite.addAnimation('openScreen','assets/images/home/small/screen-0.png','assets/images/home/small/screen-1.png');
 
     astronautSprite.addAnimation('normal','assets/images/home/small/alien-3.png','assets/images/home/small/alien-4.png');
@@ -49,18 +41,12 @@ function setup() {
     astronautSprite.addAnimation('goingRight','assets/images/home/small/alien-4.png','assets/images/home/small/alien-5.png');
     astronautSprite.addAnimation('onRight','assets/images/home/small/alien-5.png','assets/images/home/small/alien-6.png');
     astronautSprite.addAnimation('hideAstronaut','assets/images/home/blank-1.png','assets/images/home/blank-2.png');
-    // screenSprite.addAnimation('hide','assets/images/home/blank-1.png','assets/images/home/blank-2.png');
 
-    // cursor.addAnimation('hideCursor','assets/images/home/blank-1.png','assets/images/home/blank-2.png');
-    // cursor.addAnimation('showCursor','assets/images/home/cursor-1.png','assets/images/home/cursor-2.png')
 }
 
 function draw() {
     image(bg,-650,-600,scene_W,scene_H);
     image(spaceship,0,0,winWidth,winHeight+40);
-    image(aboutButton,aboutX,aboutY,buttonWidth,buttonHeight);
-    image(projectButton,projectX,projectY,buttonWidth,buttonHeight);
-    // image(screenCursor,cursorX-20,cursorY-200,40,40); 
     
     drawSprites();
 
@@ -68,9 +54,8 @@ function draw() {
     fill(255,255,255);
     textSize(20);
     textLeading(30);
+    textAlign(CENTER);
     text(screenText,winWidth/2-220,150,450); 
-
-    // image(screenButton,winWidth/2-50,10,100,100);
 
     if(mouseX>=projectX && status == 'nuetral') {
         astronautSprite.changeAnimation('goingRight');
@@ -86,57 +71,19 @@ function draw() {
         status = 'nuetral';
     }
 
-    //controling camera. Camera funtions happen only when project button is clicked.
-    // if(camStatus==true){
-    //     cursor.velocity.x = (camera.mouseX-cursor.position.x)/40;
-    //     cursor.velocity.y = (camera.mouseY-cursor.position.y)/40;
-    //     camera.position.x = cursor.position.x;
-    //     camera.position.y = cursor.position.y;
-    // }
+}
 
-    // if(cursor.position.x < 200)
-    //     cursor.position.x = 200;
-    // if(cursor.position.y < -100)
-    //     cursor.position.y = -100;
-    // if(cursor.position.x > scene_W-1400)
-    //     cursor.position.x = scene_W-1400;
-    // if(cursor.position.y > scene_H-1200)
-    //     cursor.position.y = scene_H-1200;
-
-    // camera.off();
-    // image(spaceshipFrame,0,0,winWidth,winHeight);
+function destroyClicked(){
+    if(screenPos == 'closed'){
+        screenPos = 'open';
+        screenText = '\nHumans are already destroying earth.';
+    } else {
+        screenText = "404\nIt seems you've landed in the wrong place.";
+        screenPos = 'closed';
+    }
     
 }
 
-// function getJoke(){
-//     let url = "https://geek-jokes.sameerkumar.website/api";
-//     httpGet(url,function joke(response){
-//         screenText = response;
-//     })
-// }
-
-function mouseClicked(){  
-    if(zoom == false){
-        if(screenPos == 'closed' && mouseX>winWidth/2-50 && mouseX<winWidth/2+50 && mouseY<120){
-            screenSprite.changeAnimation('openingScreen');
-            screenSprite.changeAnimation('openScreen');
-            screenPos = 'open';
-        } else if(screenPos == 'open' && ((mouseX>winWidth/2-50 && mouseX<winWidth/2+50 && mouseY<120) || (mouseX>=aboutX && mouseX<=aboutX+buttonWidth && mouseY>=aboutY && mouseY<=aboutY+buttonHeight))){
-            //executes on clicking destroy earth button. Closes the screen.
-            screenText = "It seems you've landed in the wrong place.";
-            screenSprite.changeAnimation('closingScreen');
-            screenSprite.changeAnimation('closedScreen');
-            screenPos = 'closed';
-        } else if(mouseX>=projectX && mouseX<=projectX+buttonWidth && mouseY>=projectY && mouseY<=projectY+buttonHeight){
-            window.location.href = "index.html";
-
-        } else if(mouseX>=aboutX && mouseX<=aboutX+buttonWidth && mouseY>=aboutY && mouseY<=aboutY+buttonHeight){
-            //executes on clicking about button. Opens the screen.
-            screenSprite.changeAnimation('openingScreen');
-            screenSprite.changeAnimation('openScreen');
-            screenPos = 'open';
-            screenText = 'Humans are already destroying earth.';
-            // getJoke();
-        }
-    }    
+function backClicked(){
+    window.location.href = "index.html";
 }

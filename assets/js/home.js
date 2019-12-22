@@ -9,16 +9,22 @@ var astronautSprite, astronautWidth = 830, astronautHeight = 530;
 var cursorX = winWidth/2, cursorY = winHeight/2;
 
 //adjusting the About and Project buttons by referencing to the window size
-var aboutX=0.21*winWidth, aboutY=projectY=0.825*winHeight, projectX=0.65*winWidth;
-var buttonProject, buttonAbout;
+var aboutX=0.20*winWidth, aboutY=projectY=0.825*winHeight, projectX=0.65*winWidth;
+var buttonProject, buttonAbout, planets;
+var planetImage = [];
 
 function preload() {
-    bg = loadImage('assets/images/home/space-bg-1920.png');
+    bg = loadImage('assets/images/home/space-bg.png');
     spaceship = loadImage('assets/images/home/spaceship.png');
     cursorSprite = createSprite(cursorX-10,cursorY-150,40,40);
     screenSprite = createSprite(winWidth/2,200,530,300);
     astronautSprite = createSprite(winWidth/2,winHeight-astronautHeight/2+75,830,530);
     spaceshipFrame = loadImage('assets/images/home/blank-1.png');
+    planetsData = loadJSON('./assets/js/data.json');
+    
+    star = loadImage('assets/images/home/star.png');
+    star2 = loadImage('assets/images/home/star-2.png');
+    meteor = loadImage('assets/images/home/meteor.png');
 }
 
 function setup() {
@@ -52,13 +58,25 @@ function setup() {
     buttonAbout.mousePressed(aboutClicked);
     buttonAbout.id('largeButton');
 
-    loadJSON('./assets/js/data.json');
+    // console.log(planetsData.positionX);
+
+    //setting up background
+    bg  = loadImage('assets/images/home/space-bg.png');
+    
+    for(let i =0 ; i<planetsData.planets.length;i++){
+        planetImage[i] = loadImage(planetsData.planets[i].image);
+        // image(planetImage, planetsData.planets[i].positionX, planetsData.planets[i].positionY);
+    }
 }
 
 function draw() {
     image(bg,-650,-600,scene_W,scene_H);
+    for(let i =0 ; i<planetsData.planets.length;i++){
+        // planetImage = loadImage(planetsData.planets[i].image);
+        image(planetImage[i], planetsData.planets[i].positionX, planetsData.planets[i].positionY);
+    }
     image(spaceship,0,0,winWidth,winHeight+40);
-    
+    // createBG();
     drawSprites();
 
     textFont('Russo One');
@@ -104,14 +122,14 @@ function draw() {
     
 }
 
-function getJoke(){
-    let url = "https://geek-jokes.sameerkumar.website/api";
-    httpGet(url,function joke(response){
-        screenText = response;
-    })
-}
+// function getJoke(){
+//     let url = "https://geek-jokes.sameerkumar.website/api";
+//     httpGet(url,function joke(response){
+//         screenText = response;
+//     })
+// }
 
-var screenOpen = false;
+var screenOpen = false, openProject = false;
 
 function projectClicked(){
     if(zoom==true){
@@ -119,6 +137,7 @@ function projectClicked(){
         zoom = false;
         camera.position.x = winWidth/2;
         camera.position.y = winHeight/2;
+        // bg = loadImage('assets/images/home/space-bg-1920.png');
         cursorSprite.changeAnimation('hideCursor');
         screenSprite.changeAnimation('closedScreen');
         astronautSprite.changeAnimation('normal');
@@ -128,9 +147,11 @@ function projectClicked(){
         buttonAbout.position(aboutX,aboutY);
         buttonProject.position(projectX,projectY);
         camStatus = false;
+        openProject = false;
+        
     } else{
+        // projectList();
         camera.zoom = 1.4;
-        zoom = true;
         camera.position.x = cursorX;
         camera.position.y = cursorY-100;
         cursorSprite.changeAnimation('showCursor');
@@ -141,16 +162,15 @@ function projectClicked(){
         spaceshipFrame = loadImage('assets/images/home/spaceshipFrame.png');
         buttonAbout.position(aboutX,aboutY+50);
         buttonProject.position(projectX,projectY+50);
-        camStatus = true;
-        projectList();
+        camStatus = true; 
+        zoom = true;
+        openProject = true;
+        console.log(openProject);
     }
 }
 
-function projectList(){
-}
-
 function aboutClicked(){  
-    if(screenOpen==true){
+    if(screenOpen==true){ 
         screenText = "";
         screenSprite.changeAnimation('closingScreen');
         screenSprite.changeAnimation('closedScreen');
@@ -159,7 +179,25 @@ function aboutClicked(){
         screenSprite.changeAnimation('openingScreen');
         screenSprite.changeAnimation('openScreen');
         screenOpen = true;
-        getJoke();
+        // getJoke();
+        screenText = "Hello travellers!\nI'm a UX Designer with 3 yrs of industry experience. Currently, pursuing MFA in Design and Technology at the Parsons School of Design.";
+    }
+}
+
+// function projectList(){
+    
+// }
+
+function mousePressed(){ 
+    if(openProject == true){
+        openProject = false;
+        // console.log("false");
+    } else if(openProject == false && zoom==true) {
+        for(let i=0; i<planetsData.planets.length;i++){
+            if(mouseX>=planetsData.planets[i].positionX && mouseX<=planetsData.planets[i].positionX+planetsData.planets[i].width && mouseY>=planetsData.planets[i].positionY && mouseY<=planetsData.planets[i].positionY+planetsData.planets[i].height){
+                window.location.href = planetsData.projects[i].targetUrl;
+             }
+        }
     }
 }
 

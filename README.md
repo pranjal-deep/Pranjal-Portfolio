@@ -11,4 +11,4 @@ Find the live version at https://pranjal-deep.github.io/Pranjal-Portfolio/.
 Built using P5 Play library.
 
 
-![Demo Video](./assets/images/Astronaut-straight.png)
+[![Demo Video](./assets/images/Astronaut-straight.png)](https://youtu.be/gBUP0iSR-s4)

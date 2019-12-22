@@ -150,6 +150,12 @@ function projectClicked(){
         openProject = false;
         
     } else{
+        if(screenOpen==true){
+            screenText = "";
+            screenSprite.changeAnimation('closingScreen');
+            screenSprite.changeAnimation('closedScreen');
+            screenOpen = false;
+        }
         // projectList();
         camera.zoom = 1.4;
         camera.position.x = cursorX;
@@ -165,7 +171,7 @@ function projectClicked(){
         camStatus = true; 
         zoom = true;
         openProject = true;
-        console.log(openProject);
+        // console.log(openProject);
     }
 }
 

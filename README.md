@@ -12,3 +12,12 @@ Built using P5 Play library.
 
 
 [![Watch a demo Video](./assets/images/Astronaut-straight.png)](https://youtu.be/gBUP0iSR-s4 "Watch a demo Video")
+
+Next Steps
+1. Responsive for desktop and tablet
+2. Add grid layout
+3. Configure project page
+4. Link Project details page
+5. Responsive for mobile
+6. Add elements on homepage
+7. Add music/other interactive elements on homepage
